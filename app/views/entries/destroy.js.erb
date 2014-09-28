@@ -1,0 +1,6 @@
+$("#form").html("<%= escape_javascript(render "form") %>");
+$("#entry_name").val("");
+$("#entry_address").val("");
+$("#entry_phone").val("");
+$("#entry_email").val("");
+$(".entry-rec-<%= @entry.id %>").remove();

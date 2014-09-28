@@ -1,0 +1,18 @@
+<div style="width:60%;float:right;background-color:yellow">
+  <br/>
+  <div id="form">
+    <%= render :partial => "form" %>
+  </div>
+</div>
+
+
+<div style="width:40%;float:left">
+  <h1> Names </h1>
+  <div class="listing-entries">
+    <% @entries.each do |entry| %>
+      <%= link_to entry.name,entry, :remote => true, :class => "entry-rec-#{entry.id}" %><br/>
+    <% end %>
+  </div>  
+  <br/>
+  <%= link_to "New Entry", new_entry_path, :remote => true %>
+</div>

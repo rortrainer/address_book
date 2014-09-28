@@ -1,0 +1,2 @@
+$("#form").html("<%= escape_javascript(render :partial => 'show', :locals => {:entry => @entry})%>");
+$(".listing-entries").append("<a class=entry-rec-<%= @entry.id %> data-remote=true href=<%= entry_path(@entry) %>><%= @entry.name %></a>");

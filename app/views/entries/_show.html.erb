@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= entry.name %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= entry.address %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= entry.phone %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= entry.email %>
+</p>
+<%= link_to 'Edit', edit_entry_path(entry), :remote => true %> |
+<%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete, :remote => true %>
